@@ -50,6 +50,46 @@ public class QuickSort {
     }  
 }  
 
+/***********************************JAVA*******************************************/
+//Java
+public static void quickSort(int[] a, int left, int right) {
+        int i, j, t, key;
+        if (left > right)
+            return;
+
+        key = a[left]; //temp中存的就是基准数
+        i = left;
+        j = right;
+        while (i != j) {
+            //顺序很重要，要先从右边开始找
+            while (a[j] >= key && i < j)
+                j--;
+            //再找左边
+            while (a[i] <= key && i < j)
+                i++;
+            //交换两个数在数组中的位置
+            if (i < j) {
+                t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+            }
+        }
+        //最终将基准数归位
+        a[left] = a[i];
+        a[i] = key;
+
+        quickSort(a, left, i - 1);//继续处理左边的，这里是一个递归的过程
+        quickSort(a, i + 1, right);//继续处理右边的 ，这里是一个递归的过程
+    }
+
+
+
+/***********************************JAVA*******************************************/
+
+
+
+/***********************************C*********************************************/
+
 
 //C语言
     public static void quickSort(int[] a, int left, int right) {
@@ -73,4 +113,7 @@ public class QuickSort {
                     quickSort(a,i+1,right);
                     
     }
+    
+/***********************************C*********************************************/
+
 
