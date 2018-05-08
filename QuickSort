@@ -49,3 +49,28 @@ public class QuickSort {
         quickSort(a, i+1, high);  
     }  
 }  
+
+
+//C语言
+    public static void quickSort(int[] a, int left, int right) {
+
+            int i = left;
+                    int j = right;
+                    key = a[left];
+                    if (left>right) return;
+                    while (i<j){
+                        while (i<j && a[j]>=key){
+                            j--;
+                        }
+                        a[i] = a[j];
+                        while (i<j && a[i]<=key){
+                            i++;
+                        }
+                        a[j]=a[i];
+                    }
+                    a[i] = key;
+                    quickSort(a,left,i-1);
+                    quickSort(a,i+1,right);
+                    
+    }
+
