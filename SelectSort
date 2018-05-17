@@ -1,33 +1,33 @@
 /**
-     * 选择排序
-     * 大致过程：
-     * <p>
-     * 重复（元素个数-1）次
-     * <p>
-     * 把第一个没有排序过的元素设置为最小值
-     * <p>
-     * 遍历每个没有排序过的元素
-     * <p>
-     * 如果元素 < 现在的最小值
-     * <p>
-     * 将此元素设置成为新的最小值
-     * <p>
-     * 将最小值和第一个没有排序过的位置交换
-     */
+ * 选择排序
+ * 大致过程：
+ * <p>
+ * 重复（元素个数-1）次
+ * <p>
+ * 把第一个没有排序过的元素设置为最小值
+ * <p>
+ * 遍历每个没有排序过的元素
+ * <p>
+ * 如果元素 < 现在的最小值
+ * <p>
+ * 将此元素设置成为新的最小值
+ * <p>
+ * 将最小值和第一个没有排序过的位置交换
+ */
 
-    public static void SelectSort(int[] numbers) {
-        int temp;
-        for (int i = 0; i < numbers.length; i++) {
-            //内层循环j=i+1,外层循环控制着循环次数。即每趟中a[i]这个值就是本趟的最小值。i位置上是最小值
-            for (int j = i + 1; j < numbers.length; j++) {
-                if (numbers[i] > numbers[j]) {
-                    temp = numbers[i];
-                    numbers[i] = numbers[j];
-                    numbers[j] = temp;
-                }
+public static void SelectSort(int[] numbers) {
+    int temp;
+    for (int i = 0; i < numbers.length; i++) {
+        //内层循环j=i+1,外层循环控制着循环次数。即每趟中a[i]这个值就是本趟的最小值。i位置上是最小值
+        for (int j = i + 1; j < numbers.length; j++) {
+            if (numbers[i] > numbers[j]) {
+                temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
             }
         }
-        for (int s : numbers) {
-            System.out.println(s);
-        }
     }
+    for (int s : numbers) {
+        System.out.println(s);
+    }
+}
