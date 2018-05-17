@@ -1,3 +1,5 @@
+//归并排序
+
 public class MergeSort {
     //　private　static　long　sum　=　0;
  
