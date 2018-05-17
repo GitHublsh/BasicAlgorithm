@@ -1,4 +1,4 @@
-
+//冒泡排序
 一：
 
 for(int i =0;i < score.length - 1;i++)  
