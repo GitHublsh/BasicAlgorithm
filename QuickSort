@@ -1,3 +1,5 @@
+//快速排序
+
 public class QuickSort {  
     public static void main(String[] args) {  
         int[] a = {1, 2, 4, 5, 7, 4, 5 ,3 ,9 ,0};  
